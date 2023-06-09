@@ -8,6 +8,7 @@ import TopPartners from "@/components/TopPartners/TopPartners";
 import WhitePaper from "@/components/WhitePaper/WhitePaper";
 import WhoWeAre from "@/components/WhoWeAre/WhoWeAre";
 import WhyChooseUs from "@/components/WhyChooseUs/WhyChooseUs";
+import Burn from "@/components/Burn/Burn";
 import LayoutOne from "@/layouts/LayoutOne";
 
 export default function Home() {
@@ -25,6 +26,7 @@ export default function Home() {
 
           <WhyChooseUs />
           <Sales />
+          <Burn />
 
           <div className="area-bg">
             <Roadmap />

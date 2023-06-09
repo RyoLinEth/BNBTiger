@@ -95,7 +95,7 @@ const HeaderOne = () => {
                 <nav className={"menu-nav"}>
                   <div className="logo">
                     <Link href={"/"}>
-                      <img src={"/img/svg/logo.png"} alt="BNBTiger Logo" style={{
+                      <img src={"/img/svg/Logo.png"} alt="BNBTiger Logo" style={{
                         maxWidth:'40px'
                       }}/>
                     </Link>
