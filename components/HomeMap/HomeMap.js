@@ -1,7 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useContext } from 'react'
 import Link from "next/link";
+import LanguageContext from '../Context/LanguageProvider';
 
 const HomeMap = () => {
+    const { selectedLanguage } = useContext(LanguageContext);
     const link = "https://api.dexscreener.com/latest/dex/pairs/bsc/0x5e1aab9d49f6c7122df7de4d6dbd5b03c1ebb0b7";
 
     const [price, setPrice] = useState("0");
@@ -45,27 +47,27 @@ const HomeMap = () => {
 
     const buttons = [
         {
-            title: "Buy On PancakeSwap",
+            title: selectedLanguage == "EN" ? "Buy On PancakeSwap" : "Compre Na PancakeSwap",
             link: "https://pancakeswap.finance/swap?outputCurrency=0xAC68931B666E086E9de380CFDb0Fb5704a35dc2D",
             className: "time-count day",
         },
         {
-            title: "Buy With Card",
+            title: selectedLanguage == "EN" ? "Buy With Card" : "Compre com Cartão",
             link: "https://flooz.xyz/trade/0xAC68931B666E086E9de380CFDb0Fb5704a35dc2D?network=bsc&selectedTab=ACTIVITIES",
             className: "time-count hour",
         },
         {
-            title: "Whitepaper",
+            title: selectedLanguage == "EN" ? "Whitepaper" : "Papel branco",
             link: "/api/download",
             className: "time-count min",
         },
         {
-            title: "BNBTiger Audit",
+            title: selectedLanguage == "EN" ? "BNBTiger Audit" : "Auditoria BNBTiger",
             link: "https://github.com/Tech-Audit/Smart-Contract-Audits/blob/main/TECHAUDIT_BNBTIGER.pdf",
             className: "time-count sec",
         },
         {
-            title: "Price Chart",
+            title: selectedLanguage == "EN" ? "Price Chart" : "Tabela de preços",
             link: "https://www.dextools.io/app/en/bnb/pair-explorer/0x5e1aab9d49f6c7122df7de4d6dbd5b03c1ebb0b7",
             className: "time-count sec",
         }
@@ -144,13 +146,23 @@ const HomeMap = () => {
             <img src={"/img/icon/fire.png"} alt="" />
             <br />
             <h2 className="title">
-                BNBTiger Realtime Price<br />
+                {
+                    selectedLanguage === "EN"
+                        ? "BNBTiger Realtime Price"
+                        : "BNBTiger Preço em tempo real"
+                }
+                <br />
                 <span style={{ color: '#00C4F4' }}>{price}</span>
             </h2>
 
             {/* Feature Start */}
             <br />
-            <div className='title'> Featured On</div>
+            <div className='title'>
+                {
+                    selectedLanguage === "EN"
+                        ? "Featured On"
+                        : "Destaque em"
+                }</div>
 
             <div style={display}>
                 {features.map((feature, index) => {

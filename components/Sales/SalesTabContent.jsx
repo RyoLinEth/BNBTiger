@@ -1,8 +1,11 @@
 import React from "react";
+import { useContext } from "react"
+import LanguageContext from "../Context/LanguageProvider"
 import Link from "next/link";
 import cn from "classnames";
 
 const SalesTabContent = (props) => {
+  const { selectedLanguage } = useContext(LanguageContext);
   return (
     <div
       className={cn("tab-pane fade", props.className)}
@@ -13,9 +16,9 @@ const SalesTabContent = (props) => {
       <div className="chart-content-inner">
         <h2 className="title">{props.title}</h2>
         {props.description}
-        <br/>
+        <br />
         <Link href={props.link} className="btn">
-          Buy Now
+          {selectedLanguage === "EN" ? "Buy Now" : "Comprar agora"}
         </Link>
       </div>
     </div>

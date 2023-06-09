@@ -1,8 +1,11 @@
 import { scrollToTop } from "@/lib/helpers";
 import Link from "next/link";
 import React from "react";
+import { useContext } from "react"
+import LanguageContext from "../Context/LanguageProvider"
 
 const FooterOne = () => {
+  const { selectedLanguage } = useContext(LanguageContext);
   return (
     <footer>
       <div className="footer-area">
@@ -140,7 +143,11 @@ const FooterOne = () => {
             <div className="row align-items-center">
               <div className="col-lg-6">
                 <div className="copyright-text">
-                  <p>Copyright &copy; 2023. All Rights Reserved BNBTiger</p>
+                  {
+                    selectedLanguage === "EN"
+                      ? <p>Copyright &copy; 2023. All Rights Reserved BNBTiger</p>
+                      : <p>Copyright &copy; 2023. Todos os direitos reservados BNBTiger</p>
+                  }
                 </div>
               </div>
               {/* <div className="col-lg-6 d-none d-sm-block">

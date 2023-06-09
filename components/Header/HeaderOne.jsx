@@ -1,13 +1,21 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import cn from "classnames";
 import $ from "jquery";
 import Link from "next/link";
 import { handleClickScroll } from "@/lib/helpers";
 import { useRouter } from "next/router";
+import LanguageContext from "../Context/LanguageProvider";
 
 let flag = true;
 
 const HeaderOne = () => {
+  const { selectedLanguage, setSelectedLanguage } = useContext(LanguageContext);
+  const [isClicked, setIsClicked] = useState("EN");
+
+  const handleLanguageChange = (language) => {
+    setIsClicked(language);
+    setSelectedLanguage(language);
+  }
   // sticky nav bar
   const [stickyClass, setStickyClass] = useState({
     fixed: "",
@@ -110,7 +118,9 @@ const HeaderOne = () => {
                           className={"section-link"}
                           onClick={() => handleClickScroll("header")}
                         >
-                          Home
+                          {
+                            selectedLanguage === "EN" ? "Home" : "Lar"
+                          }
                         </Link>
                       </li>
 
@@ -120,7 +130,9 @@ const HeaderOne = () => {
                           className={"section-link"}
                           onClick={() => handleClickScroll("about")}
                         >
-                          About us
+                          {
+                            selectedLanguage === "EN" ? "About us" : "Sobre nós"
+                          }
                         </Link>
                       </li>
                       <li className={isActiveLink("#tokenomics")}>
@@ -129,7 +141,9 @@ const HeaderOne = () => {
                           className={"section-link"}
                           onClick={() => handleClickScroll("tokenomics")}
                         >
-                          Tokenomics
+                          {
+                            selectedLanguage === "EN" ? "Tokenomics" : "Tokenômica"
+                          }
                         </Link>
                       </li>
                       <li className={isActiveLink("#roadmap")}>
@@ -138,7 +152,9 @@ const HeaderOne = () => {
                           className={"section-link"}
                           onClick={() => handleClickScroll("roadmap")}
                         >
-                          Roadmap
+                          {
+                            selectedLanguage === "EN" ? "Roadmap" : "Roteiro"
+                          }
                         </Link>
                       </li>
                       <li className={isActiveLink("#contact")}>
@@ -147,7 +163,9 @@ const HeaderOne = () => {
                           className={"section-link"}
                           onClick={() => handleClickScroll("contact")}
                         >
-                          Contact us
+                          {
+                            selectedLanguage === "EN" ? "Contact us" : "Contate-nos"
+                          }
                         </Link>
                       </li>
                     </ul>
@@ -157,17 +175,29 @@ const HeaderOne = () => {
                       <li className={"header-lang"}>
                         <span className={"selected-lang"}>LAN</span>
                         <ul className={"lang-list"}>
-                          <li>
-                            <Link href="/">EN</Link>
+                          <li style={{
+                            paddingLeft: '15px',
+                            paddingBottom: '5px',
+                            color: isClicked === "EN" ? "#00C4F4" : "gray",
+                            cursor: 'pointer',
+                          }}>
+                            <span onClick={() => handleLanguageChange("EN")}>EN</span>
                           </li>
-                          <li>
-                            <Link href="/">PT</Link>
+                          <li style={{
+                            paddingLeft: '15px',
+                            paddingBottom: '5px',
+                            color: isClicked !== "EN" ? "#00C4F4" : "gray",
+                            cursor: 'pointer',
+                          }}>
+                            <span onClick={() => handleLanguageChange("PT")}>PT</span>
                           </li>
                         </ul>
                       </li>
                       <li className={"header-btn"}>
                         <Link href="https://pancakeswap.finance/swap?outputCurrency=0xAC68931B666E086E9de380CFDb0Fb5704a35dc2D" className="btn">
-                          Buy Now
+                          {
+                            selectedLanguage === "EN" ? "Buy Now" : "Comprar agora"
+                          }
                         </Link>
                       </li>
                     </ul>
@@ -235,8 +265,8 @@ const HeaderOne = () => {
             </div>
           </div>
         </div>
-      </div>
-    </header>
+      </div >
+    </header >
   );
 };
 

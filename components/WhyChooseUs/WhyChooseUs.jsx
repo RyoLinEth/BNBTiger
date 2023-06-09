@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react";
+import { useContext } from "react"
+import LanguageContext from "../Context/LanguageProvider"
 import SlickSlider from "../SlickSlider/SlickSlider";
 import WhyChooseUsItem from "./WhyChooseUsItem";
 import Link from "next/link";
 
 const WhyChooseUs = () => {
+  const {selectedLanguage} = useContext(LanguageContext);
   const slickSettings = {
     dots: false,
     infinite: true,
@@ -134,11 +137,19 @@ const WhyChooseUs = () => {
         <br/>
         <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly' }}>
           <Link href="https://opensea.io/collection/bnbtiger-nft" className="btn">
-            Buy on Opensea
+            {
+              selectedLanguage === "EN" 
+              ? "Buy on Opensea"
+              : "Compre na Opensea"
+            }
           </Link>
 
           <Link href="https://nft.bitkeep.com/en/collection/bnb/0xbD0beb9F745f9E667623C691da5Ab5C2e1CD0081" className="btn">
-            Buy on BitKeep
+          {
+              selectedLanguage === "EN" 
+              ? "Buy on Bitkeep"
+              : "Compre na Bitkeep"
+            }
           </Link>
         </div>
       </div>

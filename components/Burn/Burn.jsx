@@ -1,8 +1,11 @@
 import React from "react";
 import Link from "next/link";
+import { useContext } from "react"
+import LanguageContext from "../Context/LanguageProvider"
 import Fierce from "../Fierce/Fierce";
 
 const WhoWeAre = () => {
+    const { selectedLanguage } = useContext(LanguageContext);
     const burns = [
         {
             title: 'Burn 1',
@@ -84,23 +87,33 @@ const WhoWeAre = () => {
 
     const donations = [
         {
-            title: 'Donation 1 (Ukraine donation wallet, for relief efforts.)',
+            title: selectedLanguage === "EN"
+                ? 'Donation 1 (Ukraine donation wallet, for relief efforts.)'
+                : 'Doação 1 (carteira de doação da Ucrânia, para esforços de socorro.)',
             link: 'https://bscscan.com/tx/0x22b650eeb68639a71383cfb19aee9c268b7dd5d9cb7e8232776600359c0daf43'
         },
         {
-            title: 'Donation 2 (Unchain Fund Donation Wallet)',
+            title: selectedLanguage === "EN"
+                ? 'Donation 2 (Unchain Fund Donation Wallet)'
+                : 'Doação 2 (carteira de doação Unchain Fund)',
             link: 'https://bscscan.com/tx/0xc4ec053a1f14fad8a754285605ffd60b9142eb4e201ebe3309cee9beea918858'
         },
         {
-            title: 'Donation 3 (@BinanceBCF Turkey&Syria earthquake)',
+            title: selectedLanguage === "EN"
+                ? 'Donation 3 (@BinanceBCF Turkey&Syria earthquake)'
+                : 'Doação 3 (@BinanceBCF terremoto Turquia&Síria)',
             link: 'https://bscscan.com/tx/0x7e240c78ba26d2ecc8d0d7f60adb814246fe219f040efc8b2e94ffb3fd8baab3'
         },
         {
-            title: 'Donation 4',
+            title: selectedLanguage === "EN"
+                ? 'Donation 4'
+                : 'Doação 4',
             link: 'https://bscscan.com/tx/0x492a996c9e0b1974ddc9402b0ffd9bb6c867677d09338caf1310bd1fc8b2a6ca'
         },
         {
-            title: 'Donation 5',
+            title: selectedLanguage === "EN"
+                ? 'Donation 5'
+                : 'Doação 5',
             link: 'https://bscscan.com/tx/0x8537cc7186d5f97aa5cdb1373b9d251a0d74ae746ff8a840cff97ce8c2bf260c'
         },
     ]
@@ -125,24 +138,50 @@ const WhoWeAre = () => {
                                     style={{
                                         fontSize: '30px',
                                         textAlign: 'center'
-                                    }}>Burn And Donation</span>
+                                    }}>
+                                    {
+                                        selectedLanguage === "EN"
+                                            ? "Burn And Donation"
+                                            : "Queima e Doação"
+                                    }
+                                </span>
                                 <hr />
-                                <h2 className="title">
-                                    Dear <span>#BNBTIGER</span> Army :
-                                </h2>
+                                {
+                                    selectedLanguage === "EN"
+                                        ? <h2 className="title">Dear <span>#BNBTIGER</span> Army : </h2>
+                                        : <h2 className="title">Caro  Exército <span>#BNBTIGER</span> : </h2>
+                                }
 
-                                <h4 style={{
-                                    textAlign: 'center'
-                                }}>
-                                    We have completed <br />
-                                    <span style={{ color: '#00C4F4' }}>{burns.length}</span> burns <br />
-                                    and <br />
-                                    <span style={{ color: '#00C4F4' }}>{donations.length}</span> donations so far.
-                                </h4>
+
+                                {
+                                    selectedLanguage === "EN"
+                                        ?
+                                        <h4 style={{
+                                            textAlign: 'center'
+                                        }}>
+                                            We have completed <br />
+                                            <span style={{ color: '#00C4F4' }}>{burns.length}</span> burns <br />
+                                            and <br />
+                                            <span style={{ color: '#00C4F4' }}>{donations.length}</span> donations so far.
+                                        </h4>
+                                        : 
+                                        <h4 style={{
+                                            textAlign: 'center'
+                                        }}>
+                                            Concluímos <br />
+                                            <span style={{ color: '#00C4F4' }}>{burns.length}</span> queimas <br />
+                                            E <br />
+                                            <span style={{ color: '#00C4F4' }}>{donations.length}</span> doações até agora.
+                                        </h4>
+                                }
+
                             </div>
                             <hr />
 
-                            <h4 className="title">Burns</h4>
+                            <h4 className="title">
+                                {
+                                    selectedLanguage === "EN" ? "Burn" : "Queimaduras"
+                                }</h4>
                             <div style={{
                                 display: 'flex',
                                 flexDirection: 'row',
@@ -153,7 +192,9 @@ const WhoWeAre = () => {
                                         return (
                                             <div key={burn.title} style={{ padding: '10px' }}>
                                                 <Link href={burn.link}>
-                                                    {burn.title}
+                                                    {
+                                                        selectedLanguage === "EN" ? "Burn" : "Queima"
+                                                    } {index + 1}
                                                 </Link>
                                             </div>
                                         )
@@ -161,8 +202,12 @@ const WhoWeAre = () => {
                                 }
                             </div>
 
-                            <hr/>
-                            <h4 className="title">Donations</h4>
+                            <hr />
+                            <h4 className="title">
+                                {
+                                    selectedLanguage === "EN" ? "Donations" : "Doações"
+                                }
+                            </h4>
                             <div style={{
                                 display: 'flex',
                                 flexDirection: 'row',

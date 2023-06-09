@@ -1,10 +1,13 @@
 import React from "react";
+import { useContext } from "react"
+import LanguageContext from "../Context/LanguageProvider"
 import ContactOneForm from "./ContactOneForm";
 import ContactOneInfoItem from "./ContactOneInfoItem";
 import cn from "classnames";
 
 
 const ContactOne = () => {
+  const { selectedLanguage } = useContext(LanguageContext);
   const social_items = [
     {
       icon: 'fa fa-telegram',
@@ -27,7 +30,13 @@ const ContactOne = () => {
       icon: "fa-envelope",
       content: (
         <>
-          Cooperation and suggestions: <br />
+
+          {
+            selectedLanguage === "EN" 
+            ? "Cooperation and suggestions:" 
+            : "Cooperação e sugestões:"
+          }
+          <br />
           bnbtiger9527@gmail.com
         </>
       ),
@@ -45,9 +54,15 @@ const ContactOne = () => {
                 style={{
                   fontSize: '30px',
                   textAlign: 'center'
-                }}>Contact</span>
+                }}>
+                {
+                  selectedLanguage === "EN" ? "Contact" : "CONTATO"
+                }</span>
               <h2 className="title">
-                <span>Contact</span> BNBTiger
+                <span>
+                  {
+                    selectedLanguage === "EN" ? "Contact" : "CONTATO"
+                  }</span> BNBTiger
               </h2>
               <br />
               <img src={"/img/svg/BNBTigerWithBG.png"} alt="BNBTiger Logo" style={{
@@ -59,7 +74,10 @@ const ContactOne = () => {
 
         <h2 className="Title" style={{
           textAlign: 'center'
-        }}>Socials</h2>
+        }}>
+          {
+            selectedLanguage === "EN" ? "Socials" : "Redes Sociais"
+          }</h2>
         <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
           {
             social_items.map((x, index) => {

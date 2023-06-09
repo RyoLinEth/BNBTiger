@@ -1,10 +1,17 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import CountDownOne from "../CountDown/CountDownOne";
 import HomeMap from "../HomeMap/HomeMap";
+import LanguageContext from "../Context/LanguageProvider";
 
 const Banner = () => {
 
+  const { selectedLanguage } = useContext(LanguageContext);
 
+  const datalist = {
+    bnbtiger: selectedLanguage == "EN" ? "BNBTiger!" : "BNBTiger!",
+    yell: selectedLanguage == "EN" ? "Fierce.Firm.Victory" : "Feroz.Firme.Vitória"
+
+  }
 
   return (
     <section className="banner-area banner-bg">
@@ -30,21 +37,21 @@ const Banner = () => {
         <div className="row justify-content-center">
           <div className="col-lg-10">
             <div className="banner-content text-center">
-              <img src={"/img/svg/Logo.png"} alt="" style={{borderRadius:'50%',maxWidth:'200px'}}/>
+              <img src={"/img/svg/Logo.png"} alt="" style={{ borderRadius: '50%', maxWidth: '200px' }} />
               {/* <h1 className="title"> */}
-                <p style={{
-                  fontSize:'70px',
-                  fontWeight:'bolder',
-                  color:'#00C4F4',
-                }}>BNBTiger!</p>
+              <p style={{
+                fontSize: '70px',
+                fontWeight: 'bolder',
+                color: '#00C4F4',
+              }}>{datalist.bnbtiger}</p>
               {/* </h1> */}
               <span style={{
-                fontSize:'25px'
-              }}>Fierce.Firm.Victory</span>
+                fontSize: '25px'
+              }}>{datalist.yell}</span>
             </div>
           </div>
         </div>
-        <br/>
+        <br />
         <div className="row justify-content-center">
           <div className="col-xl-10">
             <div className="banner-countdown-wrap text-center">

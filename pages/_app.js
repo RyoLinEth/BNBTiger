@@ -7,6 +7,8 @@ import "@/styles/globals.css";
 import "@/styles/responsive.css";
 import dynamic from "next/dynamic";
 import { useEffect } from "react";
+import { LanguageProvider } from "@/components/Context/LanguageProvider";
+
 
 const bootstrapJs = dynamic(import("bootstrap/dist/js/bootstrap.bundle.min"), {
   ssr: false,
@@ -29,5 +31,9 @@ export default function App({ Component, pageProps }) {
     wow.init();
   }, []);
 
-  return <Component {...pageProps} />;
+  return  (
+    <LanguageProvider>
+      <Component {...pageProps} />
+    </LanguageProvider>
+  );
 }
