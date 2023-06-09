@@ -16,7 +16,7 @@ const FooterOne = () => {
               <i className="fas fa-arrow-up"></i>
             </button>
           </div>
-          <div className="footer-top">
+          {/* <div className="footer-top">
             <div className="row">
               <div className="col-xl-3 col-lg-4 col-md-6">
                 <div
@@ -135,15 +135,15 @@ const FooterOne = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
           <div className="footer-bottom">
             <div className="row align-items-center">
               <div className="col-lg-6">
                 <div className="copyright-text">
-                  <p>Copyright &copy; 2022. All Rights Reserved Bigtech</p>
+                  <p>Copyright &copy; 2023. All Rights Reserved BNBTiger</p>
                 </div>
               </div>
-              <div className="col-lg-6 d-none d-sm-block">
+              {/* <div className="col-lg-6 d-none d-sm-block">
                 <div className="footer-menu">
                   <ul>
                     <li>
@@ -157,7 +157,7 @@ const FooterOne = () => {
                     </li>
                   </ul>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

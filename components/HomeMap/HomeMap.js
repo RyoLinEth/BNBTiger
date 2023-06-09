@@ -32,12 +32,12 @@ const HomeMap = () => {
 
     const features = [
         {
-            imageURL: "",
+            imageURL: "../img/svg/CoinGeckoLogo.svg",
             imageLink: "https://www.coingecko.com/en/coins/bnb-tiger-inu",
             imageAlt: "CG",
         },
         {
-            imageURL: "",
+            imageURL: "../img/svg/cmc.png",
             imageLink: "https://coinmarketcap.com/currencies/bnbtiger/",
             imageAlt: "CMC",
         },
@@ -45,22 +45,22 @@ const HomeMap = () => {
 
     const lists = [
         {
-            imageURL: "",
+            imageURL: "../img/svg/flooz.png",
             imageLink: "https://flooz.xyz/trade/0xAC68931B666E086E9de380CFDb0Fb5704a35dc2D?network=bsc",
             imageAlt: "Flooz",
         },
         {
-            imageURL: "",
+            imageURL: "../img/svg/xt.png",
             imageLink: "https://pancakeswap.finance/swap?outputCurrency=0xAC68931B666E086E9de380CFDb0Fb5704a35dc2D",
             imageAlt: "PancakeSwap",
         },
         {
-            imageURL: "",
+            imageURL: "../img/svg/bitmart.png",
             imageLink: "https://www.bitmart.com/trade/en-US?layout=basic&theme=dark&symbol=BNBTIGER%281M%29_USDT",
             imageAlt: "BitMart",
         },
         {
-            imageURL: "",
+            imageURL: "../img/svg/bkex.png",
             imageLink: "https://www.bkex.com/en/trade/BNBTiger_USDT",
             imageAlt: "BKEX",
         },
@@ -74,6 +74,10 @@ const HomeMap = () => {
         justifyContent: 'center'
     }
 
+    const maxStyle = {
+        maxWidth: '60px',
+    }
+
     return (
         <div>
             {/* Buttons Start */}
@@ -84,7 +88,7 @@ const HomeMap = () => {
                             <Link href={button.link}>
                                 <div className={button.className}>
                                     <div
-                                        style={{color: '#00C4F4'}}
+                                        style={{ color: '#00C4F4' }}
                                     >{button.title}</div>
                                 </div>
                             </Link>
@@ -103,7 +107,7 @@ const HomeMap = () => {
                     return (
                         <div>
                             <div key={feature.imageAlt} className="coming-time">
-                                <img src={feature.imageURL} alt={feature.imageAlt} className="time-count" />
+                                <img src={feature.imageURL} alt={feature.imageAlt} className="time-count" style={maxStyle}></img>
                             </div>
                         </div>
                     )
@@ -119,7 +123,7 @@ const HomeMap = () => {
                     return (
                         <div>
                             <div key={list.imageAlt} className="coming-time">
-                                <img src={list.imageURL} alt={list.imageAlt} className="time-count" />
+                                <img src={list.imageURL} alt={list.imageAlt} className="time-count" style={maxStyle} />
                             </div>
                         </div>
                     )

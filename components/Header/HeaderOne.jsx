@@ -95,7 +95,9 @@ const HeaderOne = () => {
                 <nav className={"menu-nav"}>
                   <div className="logo">
                     <Link href={"/"}>
-                      <img src={"/img/logo/logo.png"} alt="BigTech Logo" />
+                      <img src={"/img/svg/logo.png"} alt="BNBTiger Logo" style={{
+                        maxWidth:'40px'
+                      }}/>
                     </Link>
                   </div>
 
@@ -138,21 +140,6 @@ const HeaderOne = () => {
                           Roadmap
                         </Link>
                       </li>
-                      <li className={"menu-item-has-children"}>
-                        <Link href="/blog">Blog</Link>
-                        <ul className={cn("sub-menu")}>
-                          <li className={cn(pathname == "/blog" && "active")}>
-                            <Link href="/blog">Our Blog</Link>
-                          </li>
-                          <li
-                            className={cn(
-                              pathname == "/blog/blog-details" && "active"
-                            )}
-                          >
-                            <Link href="/blog/blog-details">Blog Details</Link>
-                          </li>
-                        </ul>
-                      </li>
                       <li className={isActiveLink("#contact")}>
                         <Link
                           href="#contact"
@@ -166,7 +153,7 @@ const HeaderOne = () => {
                   </div>
                   <div className={cn("header-action", "d-none d-md-block")}>
                     <ul>
-                      <li className={"header-lang"}>
+                      {/* <li className={"header-lang"}>
                         <span className={"selected-lang"}>ENG</span>
                         <ul className={"lang-list"}>
                           <li>
@@ -182,9 +169,9 @@ const HeaderOne = () => {
                             <Link href="#">CIN</Link>
                           </li>
                         </ul>
-                      </li>
+                      </li> */}
                       <li className={"header-btn"}>
-                        <Link href="#" className="btn">
+                        <Link href="https://pancakeswap.finance/swap?outputCurrency=0xAC68931B666E086E9de380CFDb0Fb5704a35dc2D" className="btn">
                           Buy Now
                         </Link>
                       </li>
@@ -202,8 +189,8 @@ const HeaderOne = () => {
                   <div className={"nav-logo"}>
                     <Link href="/">
                       <img
-                        src={"/img/logo/logo.png"}
-                        alt="BigTech Logo"
+                        src={"/img/svg/logo.png"}
+                        alt="BNBTiger Logo"
                         title=""
                       />
                     </Link>
@@ -213,7 +200,7 @@ const HeaderOne = () => {
                     {/* <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->  */}
                   </div>
 
-                  <div className={"social-links"}>
+                  {/* <div className={"social-links"}>
                     <ul className="clearfix">
                       <li>
                         <a href="#">
@@ -241,7 +228,7 @@ const HeaderOne = () => {
                         </a>
                       </li>
                     </ul>
-                  </div>
+                  </div> */}
                 </nav>
               </div>
 

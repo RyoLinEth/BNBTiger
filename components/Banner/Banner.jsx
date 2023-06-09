@@ -69,6 +69,7 @@ const Banner = () => {
         <div className="row justify-content-center">
           <div className="col-lg-10">
             <div className="banner-content text-center">
+              {/* <img src={"/img/svg/astroTiger.jpg"} alt="" /> */}
               <img src={"/img/icon/fire.png"} alt="" />
               <h2 className="title">
                 BNBTiger : <span>{price}</span>

@@ -61,25 +61,6 @@ const Roadmap = () => {
         "Influencer marketing partnership"
       ],
     },
-    // {
-    //   roadmapTitle: "Mid of Q4 2021",
-    //   title: "Benefits",
-    //   info: [
-    //     "Mainnet launch",
-    //     "Centralized exchange launch",
-    //     "Public incentivize testnet",
-    //   ],
-    // },
-    // {
-    //   roadmapTitle: "Mid of Q4 2021",
-    //   title: "Operational",
-    //   info: [
-    //     <>
-    //       SubQuery launches its <br /> own parthian
-    //     </>,
-    //     "SubQuery Foundation",
-    //   ],
-    // },
   ];
 
   const scrollRef = useHorizontalScroll();

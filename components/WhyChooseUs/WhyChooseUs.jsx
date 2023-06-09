@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import SlickSlider from "../SlickSlider/SlickSlider";
 import WhyChooseUsItem from "./WhyChooseUsItem";
+import Link from "next/link";
 
 const WhyChooseUs = () => {
   const slickSettings = {
@@ -9,8 +10,8 @@ const WhyChooseUs = () => {
     speed: 1000,
     autoplay: true,
     arrows: false,
-    slidesToShow: 4,
-    slidesToScroll: 1,
+    slidesToShow: 2,
+    slidesToScroll: 4,
     responsive: [
       {
         breakpoint: 1200,
@@ -48,52 +49,38 @@ const WhyChooseUs = () => {
 
   const slider_items = [
     {
-      src: "/img/icon/choose_icon01.svg",
+      src: "/img/nft/1.jpg",
       alt: "",
       link: "/",
       title: "Mobile payment make easy",
       description: "Add new, trending and rare artwork to your collection.",
     },
     {
-      src: "/img/icon/choose_icon02.svg",
+      src: "/img/nft/2.jpg",
       alt: "",
       link: "/",
       title: "Lifetime free transaction",
       description: "Add new, trending and rare artwork to your collection.",
     },
     {
-      src: "/img/icon/choose_icon03.svg",
+      src: "/img/nft/3.jpg",
       alt: "",
       link: "/",
       title: <>Protect the identity</>,
       description: "Add new, trending and rare artwork to your collection.",
     },
     {
-      src: "/img/icon/choose_icon04.svg",
+      src: "/img/nft/4.jpg",
       alt: "",
       link: "/",
       title: "Sercurity & control over money",
       description: "Add new, trending and rare artwork to your collection.",
     },
     {
-      src: "/img/icon/choose_icon01.svg",
+      src: "/img/nft/5.jpg",
       alt: "",
       link: "/",
       title: "Lifetime free transaction",
-      description: "Add new, trending and rare artwork to your collection.",
-    },
-    {
-      src: "/img/icon/choose_icon03.svg",
-      alt: "",
-      link: "/",
-      title: <>Protect the identity</>,
-      description: "Add new, trending and rare artwork to your collection.",
-    },
-    {
-      src: "/img/icon/choose_icon04.svg",
-      alt: "",
-      link: "/",
-      title: "Sercurity & control over money",
       description: "Add new, trending and rare artwork to your collection.",
     },
   ];
@@ -144,15 +131,16 @@ const WhyChooseUs = () => {
             className="slide-filler"
           />
         </div>
+        <br/>
+        <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly' }}>
+          <Link href="https://opensea.io/collection/bnbtiger-nft" className="btn">
+            Buy on Opensea
+          </Link>
 
-        {/* <div
-          className="slide-progress"
-          role="progressbar"
-          aria-valuemin="0"
-          aria-valuemax="100"
-        >
-          <span className="slider__label sr-only"></span>
-        </div> */}
+          <Link href="https://nft.bitkeep.com/en/collection/bnb/0xbD0beb9F745f9E667623C691da5Ab5C2e1CD0081" className="btn">
+            Buy on BitKeep
+          </Link>
+        </div>
       </div>
     </section>
   );

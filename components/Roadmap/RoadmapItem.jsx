@@ -5,9 +5,6 @@ const RoadmapItem = (props) => {
     <div className="bt-roadmap-item" >
       <span className="roadmap-title">{props.item.roadmapTitle}</span>
       <div className="roadmap-content" >
-        {/* {
-          props.items !== undefined &&
-          <> */}
             <span className="dot" />
             <h4 className="title">{props.item.title}</h4>
 
