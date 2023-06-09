@@ -96,8 +96,9 @@ const HeaderOne = () => {
                   <div className="logo">
                     <Link href={"/"}>
                       <img src={"/img/svg/Logo.png"} alt="BNBTiger Logo" style={{
-                        maxWidth:'40px'
-                      }}/>
+                        borderRadius: '50%',
+                        maxWidth: '40px'
+                      }} />
                     </Link>
                   </div>
 
@@ -192,6 +193,9 @@ const HeaderOne = () => {
                         src={"/img/svg/Logo.png"}
                         alt="BNBTiger Logo"
                         title=""
+                        style={{
+                          borderRadius: '50%',
+                        }}
                       />
                     </Link>
                   </div>

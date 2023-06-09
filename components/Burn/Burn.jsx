@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Fierce from "../Fierce/Fierce";
 
 const WhoWeAre = () => {
     const burns = [
@@ -170,8 +171,11 @@ const WhoWeAre = () => {
                                     })
                                 }
                             </div>
+                            <br/>
+                            <Fierce />
                         </div>
                     </div>
+                    
                 </div>
             </div>
         </section>

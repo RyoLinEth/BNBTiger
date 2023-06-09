@@ -4,7 +4,7 @@ import SalesTabContent from "./SalesTabContent";
 
 const Sales = () => {
   const chart_info_list = [
-    "Liq Burnt: 74.3710%",
+    "Liq Burn: 74.3710%",
     "Liq Locked: 24.4021%",
   ];
 

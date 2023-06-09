@@ -1,7 +1,48 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Link from "next/link";
 
 const HomeMap = () => {
+    const link = "https://api.dexscreener.com/latest/dex/pairs/bsc/0x5e1aab9d49f6c7122df7de4d6dbd5b03c1ebb0b7";
+
+    const [price, setPrice] = useState("0");
+
+    useEffect(() => {
+        fetchData();
+    }, []);
+
+
+    const NumberConversion = (originalData) => {
+        const stringToNum = Number(originalData);
+        const scientificNotation = stringToNum.toExponential();
+
+        //  提取次方
+        const match = scientificNotation.match(/e\+?(-?\d+)/);
+        const exponent = parseInt(match[1], 10);
+        const zeroCount = Math.abs(exponent) - 1;
+
+        //  提取最後幾位
+        const tempString = originalData.slice(-(originalData.length - zeroCount - 2))
+        console.log(tempString)
+
+        const convertedData = `0.0(${zeroCount})${tempString}`;
+
+        return convertedData;
+    };
+
+    const fetchData = async () => {
+        try {
+            const response = await fetch(link);
+            const tempData = await response.json();
+
+            const tempPrice = tempData.pair.priceUsd
+            const convertedPrice = NumberConversion(tempPrice)
+
+            setPrice(convertedPrice);
+        } catch (error) {
+            console.log('Error fetching data:', error);
+        }
+    };
+
     const buttons = [
         {
             title: "Buy On PancakeSwap",
@@ -97,6 +138,14 @@ const HomeMap = () => {
                 })}
             </div>
             {/* Buttons End */}
+            
+            <br />
+            <img src={"/img/icon/fire.png"} alt="" />
+            <br/>
+            <h2 className="title">
+                BNBTiger Realtime Price<br/>
+                <span style={{color:'#00C4F4'}}>{price}</span>
+            </h2>
 
             {/* Feature Start */}
             <br />
