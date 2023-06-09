@@ -5,7 +5,7 @@ const LanguageContext = createContext();
 
 // 创建提供语言状态的语言上下文提供器
 export const LanguageProvider = ({ children }) => {
-  const [selectedLanguage, setSelectedLanguage] = useState('');
+  const [selectedLanguage, setSelectedLanguage] = useState('EN');
 
   return (
     <LanguageContext.Provider value={{ selectedLanguage, setSelectedLanguage }}>
