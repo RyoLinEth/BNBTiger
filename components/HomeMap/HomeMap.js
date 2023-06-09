@@ -109,18 +109,15 @@ const HomeMap = () => {
 
     const display = {
         display: 'flex',
-        flexDirection: 'row',
         flexWrap: 'wrap',
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'space-evenly'
     }
 
     const maxStyle = {
-        maxWidth: '60px',
-    }
-
-    const startDownload = () => {
-
+        width: '120px',
+        height: 'auto',
+        margin: '10px'
     }
 
     return (
@@ -160,8 +157,13 @@ const HomeMap = () => {
                     return (
                         <div>
                             <div key={feature.imageAlt} className="coming-time">
-                                <Link href={feature.imageLink} >
-                                    <img src={feature.imageURL} alt={feature.imageAlt} className="time-count" style={maxStyle}></img>
+                                <Link href={feature.imageLink}>
+                                    <img
+                                        src={feature.imageURL}
+                                        alt={feature.imageAlt}
+                                        // className="time-count"
+                                        style={maxStyle}
+                                    />
                                 </Link>
                             </div>
                         </div>
@@ -179,7 +181,12 @@ const HomeMap = () => {
                         <div>
                             <div key={list.imageAlt} className="coming-time">
                                 <Link href={list.imageLink} >
-                                    <img src={list.imageURL} alt={list.imageAlt} className="time-count" style={maxStyle} />
+                                    <img
+                                        src={list.imageURL}
+                                        alt={list.imageAlt}
+                                        // className="time-count"
+                                        style={maxStyle}
+                                    />
                                 </Link>
                             </div>
                         </div>

@@ -154,23 +154,17 @@ const HeaderOne = () => {
                   </div>
                   <div className={cn("header-action", "d-none d-md-block")}>
                     <ul>
-                      {/* <li className={"header-lang"}>
-                        <span className={"selected-lang"}>ENG</span>
+                      <li className={"header-lang"}>
+                        <span className={"selected-lang"}>LAN</span>
                         <ul className={"lang-list"}>
                           <li>
-                            <Link href="#">IND</Link>
+                            <Link href="#">EN</Link>
                           </li>
                           <li>
-                            <Link href="#">BNG</Link>
-                          </li>
-                          <li>
-                            <Link href="#">TUR</Link>
-                          </li>
-                          <li>
-                            <Link href="#">CIN</Link>
+                            <Link href="#">PT</Link>
                           </li>
                         </ul>
-                      </li> */}
+                      </li>
                       <li className={"header-btn"}>
                         <Link href="https://pancakeswap.finance/swap?outputCurrency=0xAC68931B666E086E9de380CFDb0Fb5704a35dc2D" className="btn">
                           Buy Now
