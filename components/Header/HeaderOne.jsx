@@ -189,7 +189,7 @@ const HeaderOne = () => {
                   <div className={"nav-logo"}>
                     <Link href="/">
                       <img
-                        src={"/img/svg/logo.png"}
+                        src={"/img/svg/Logo.png"}
                         alt="BNBTiger Logo"
                         title=""
                       />
