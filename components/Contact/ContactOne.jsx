@@ -41,7 +41,11 @@ const ContactOne = () => {
         <div className="row justify-content-center">
           <div className="col-lg-8">
             <div className="section-title text-center mb-70">
-              <span className="sub-title">Contact</span>
+              <span className="sub-title"
+                style={{
+                  fontSize: '30px',
+                  textAlign: 'center'
+                }}>Contact</span>
               <h2 className="title">
                 <span>Contact</span> BNBTiger
               </h2>

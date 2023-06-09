@@ -158,10 +158,10 @@ const HeaderOne = () => {
                         <span className={"selected-lang"}>LAN</span>
                         <ul className={"lang-list"}>
                           <li>
-                            <Link href="#">EN</Link>
+                            <Link href="/">EN</Link>
                           </li>
                           <li>
-                            <Link href="#">PT</Link>
+                            <Link href="/">PT</Link>
                           </li>
                         </ul>
                       </li>

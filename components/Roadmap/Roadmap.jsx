@@ -71,9 +71,13 @@ const Roadmap = () => {
         <div className="row justify-content-center">
           <div className="col-xl-5 col-lg-8">
             <div className="section-title text-center mb-60">
-              <span className="sub-title">Our Roadmap</span>
+              <span className="sub-title"
+                style={{
+                  fontSize: '30px',
+                  textAlign: 'center'
+                }}>Our Roadmap</span>
               <h2 className="title">
-                BNBTiger <span>Map</span> : <br/>
+                BNBTiger <span>Map</span> : <br />
                 We set goals and conquer them
               </h2>
             </div>
@@ -85,9 +89,9 @@ const Roadmap = () => {
             <div
               className="bt-roadmap_x bt-roadmap-scrollbar"
               ref={scrollRef}
-              style={{ 
-                overflow: "auto", 
-                height:'80vh'
+              style={{
+                overflow: "auto",
+                height: '80vh'
               }}
             >
               <div className="bt-roadmap-wrap">

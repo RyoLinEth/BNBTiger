@@ -12,10 +12,12 @@ const PageLoader = () => {
 
   if (loading) {
     return (
-      <div className={cn(styles.preloader)}>
-        <div className={cn(styles.spinner)}>
-          {/* <span>Loading...</span> */}
-          <img src={"img/svg/Logo.png"} alt="Logo"/>
+      <div className={cn(styles.preloader)} >
+        <div className={cn(styles.spinner)} style={{
+          width: '250px',
+          marginBottom:'300px'
+        }}>
+          <img src={"img/svg/LogoTrans.png"} alt="Logo" />
           <div className={cn(styles.rect1)}></div>
           <div className={cn(styles.rect2)}></div>
           <div className={cn(styles.rect3)}></div>
