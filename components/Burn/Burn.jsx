@@ -121,18 +121,26 @@ const WhoWeAre = () => {
                     <div className="col-lg-6">
                         <div className="about-content wow fadeInRight" data-wow-delay=".2s">
                             <div className="section-title mb-30">
-                                <span className="sub-title">Burn And Donation</span>
+                                <span className="sub-title"
+                                    style={{
+                                        fontSize: '30px',
+                                        textAlign: 'center'
+                                    }}>Burn And Donation</span>
+                                <hr />
                                 <h2 className="title">
                                     Dear <span>#BNBTIGER</span> Army :
                                 </h2>
 
-                                <h4>
+                                <h4 style={{
+                                    textAlign: 'center'
+                                }}>
                                     We have completed <br />
-                                    <span style={{color:'#00C4F4'}}>{burns.length}</span> burns <br/>
+                                    <span style={{ color: '#00C4F4' }}>{burns.length}</span> burns <br />
                                     and <br />
-                                    <span style={{color:'#00C4F4'}}>{donations.length}</span> donations so far.
+                                    <span style={{ color: '#00C4F4' }}>{donations.length}</span> donations so far.
                                 </h4>
                             </div>
+                            <hr />
 
                             <h4 className="title">Burns</h4>
                             <div style={{
@@ -153,6 +161,7 @@ const WhoWeAre = () => {
                                 }
                             </div>
 
+                            <hr/>
                             <h4 className="title">Donations</h4>
                             <div style={{
                                 display: 'flex',
@@ -171,11 +180,11 @@ const WhoWeAre = () => {
                                     })
                                 }
                             </div>
-                            <br/>
+                            <br />
                             <Fierce />
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
         </section>

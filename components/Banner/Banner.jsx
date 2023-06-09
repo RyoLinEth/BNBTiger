@@ -30,11 +30,17 @@ const Banner = () => {
         <div className="row justify-content-center">
           <div className="col-lg-10">
             <div className="banner-content text-center">
-              <img src={"/img/svg/Logo.png"} alt="" style={{borderRadius:'20px'}}/>
-              <h2 className="title">
-                <span>BNBTiger!</span>
-              </h2>
-              <span>Fierce.Firm.Victory</span>
+              <img src={"/img/svg/Logo.png"} alt="" style={{borderRadius:'50%',maxWidth:'200px'}}/>
+              {/* <h1 className="title"> */}
+                <p style={{
+                  fontSize:'70px',
+                  fontWeight:'bolder',
+                  color:'#00C4F4',
+                }}>BNBTiger!</p>
+              {/* </h1> */}
+              <span style={{
+                fontSize:'25px'
+              }}>Fierce.Firm.Victory</span>
             </div>
           </div>
         </div>

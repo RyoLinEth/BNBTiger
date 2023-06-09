@@ -14,6 +14,8 @@ const PageLoader = () => {
     return (
       <div className={cn(styles.preloader)}>
         <div className={cn(styles.spinner)}>
+          {/* <span>Loading...</span> */}
+          <img src={"img/svg/Logo.png"} alt="Logo"/>
           <div className={cn(styles.rect1)}></div>
           <div className={cn(styles.rect2)}></div>
           <div className={cn(styles.rect3)}></div>

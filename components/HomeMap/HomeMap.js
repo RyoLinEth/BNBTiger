@@ -56,7 +56,7 @@ const HomeMap = () => {
         },
         {
             title: "Whitepaper",
-            link: "https://www.bnbtiger.top/static/upload/file/20230203/1675386735503028.pdf",
+            link: "/api/download",
             className: "time-count min",
         },
         {
@@ -119,6 +119,10 @@ const HomeMap = () => {
         maxWidth: '60px',
     }
 
+    const startDownload = () => {
+
+    }
+
     return (
         <div>
             {/* Buttons Start */}
@@ -138,13 +142,13 @@ const HomeMap = () => {
                 })}
             </div>
             {/* Buttons End */}
-            
+
             <br />
             <img src={"/img/icon/fire.png"} alt="" />
-            <br/>
+            <br />
             <h2 className="title">
-                BNBTiger Realtime Price<br/>
-                <span style={{color:'#00C4F4'}}>{price}</span>
+                BNBTiger Realtime Price<br />
+                <span style={{ color: '#00C4F4' }}>{price}</span>
             </h2>
 
             {/* Feature Start */}
@@ -156,7 +160,9 @@ const HomeMap = () => {
                     return (
                         <div>
                             <div key={feature.imageAlt} className="coming-time">
-                                <img src={feature.imageURL} alt={feature.imageAlt} className="time-count" style={maxStyle}></img>
+                                <Link href={feature.imageLink} >
+                                    <img src={feature.imageURL} alt={feature.imageAlt} className="time-count" style={maxStyle}></img>
+                                </Link>
                             </div>
                         </div>
                     )
@@ -172,7 +178,9 @@ const HomeMap = () => {
                     return (
                         <div>
                             <div key={list.imageAlt} className="coming-time">
-                                <img src={list.imageURL} alt={list.imageAlt} className="time-count" style={maxStyle} />
+                                <Link href={list.imageLink} >
+                                    <img src={list.imageURL} alt={list.imageAlt} className="time-count" style={maxStyle} />
+                                </Link>
                             </div>
                         </div>
                     )

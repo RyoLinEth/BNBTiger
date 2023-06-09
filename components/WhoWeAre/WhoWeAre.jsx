@@ -11,7 +11,10 @@ const WhoWeAre = () => {
             <div className="about-img wow fadeInLeft" data-wow-delay=".2s">
 
               <div className="section-title mb-30">
-                <span className="sub-title">About Us</span>
+                <span className="sub-title"
+                  style={{
+                    fontSize: '30px'
+                  }}>About Us</span>
                 <img src={"/img/images/bnbTiger_about.png"} alt="" />
                 <img
                   src={"/img/images/about_img02.png"}
@@ -23,12 +26,6 @@ const WhoWeAre = () => {
           </div>
           <div className="col-lg-6">
             <div className="about-content wow fadeInRight" data-wow-delay=".2s">
-              <div className="section-title mb-30">
-                {/* <span className="sub-title">About Us</span> */}
-                <h2 className="title">
-                  BSC <span>Best Meme</span>
-                </h2>
-              </div>
               <p>
                 BNBTiger is the king of beasts. They are the symbol of victory and strength. Powerful and tough.and our $BNBTIGER community is the same.
               </p>
@@ -39,9 +36,12 @@ const WhoWeAre = () => {
                 We are fed up with the fraud projects in the market! These projects have lowered people's trust, led to suspicion and panic, and finally led to the death of one project after another. No more great projects like Shib can be born! The goal of the birth of BNBTiger is to rebuild the security and trust of the market. Like Shib, Let's complete another 260000 X the task. So we launched a huge number of 10.000.000.000.000.000.000.000.000 tokens, destroyed 50%, and launched fairly! Let's start from zero. This is a new social experiment. We want to see how many zeros can be killed by real trust! Our ultimate goal is to eliminate all zeros and surpass the historical record of shib!
               </p>
               <Fierce />
-              <br/>
-              <p>
-                BNBTiger Contract: 0xac68931b666e086e9de380cfdb0fb5704a35dc2d
+              <br />
+              <p
+                style={{ wordBreak: 'break-word' }}
+              >
+                BNBTiger Contract: <br />
+                0xac68931b666e086e9de380cfdb0fb5704a35dc2d
               </p>
             </div>
           </div>
