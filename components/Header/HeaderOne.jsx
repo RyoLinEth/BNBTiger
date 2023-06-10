@@ -223,39 +223,95 @@ const HeaderOne = () => {
                       />
                     </Link>
                   </div>
+                  <div>
+                    <ul className={"navigation"}>
+                      <li className={cn(hash == "header" && "active")}>
+                        <Link
+                          href="#header"
+                          className={"section-link"}
+                          onClick={() => handleClickScroll("header")}
+                        >
+                          {
+                            selectedLanguage === "EN" ? "Home" : "Lar"
+                          }
+                        </Link>
+                      </li>
 
-                  <div className={"menu-outer"}>
-                    {/* <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->  */}
-                  </div>
-
-                  {/* <div className={"social-links"}>
-                    <ul className="clearfix">
-                      <li>
-                        <a href="#">
-                          <i className="fab fa-facebook-f"></i>
-                        </a>
+                      <li className={cn(hash == "about" && "active")}>
+                        <Link
+                          href="#about"
+                          className={"section-link"}
+                          onClick={() => handleClickScroll("about")}
+                        >
+                          {
+                            selectedLanguage === "EN" ? "About us" : "Sobre nós"
+                          }
+                        </Link>
                       </li>
-                      <li>
-                        <a href="#">
-                          <i className="fab fa-twitter"></i>
-                        </a>
+                      <li className={isActiveLink("#tokenomics")}>
+                        <Link
+                          href="#tokenomics"
+                          className={"section-link"}
+                          onClick={() => handleClickScroll("tokenomics")}
+                        >
+                          {
+                            selectedLanguage === "EN" ? "Tokenomics" : "Tokenômica"
+                          }
+                        </Link>
                       </li>
-                      <li>
-                        <a href="#">
-                          <i className="fab fa-instagram"></i>
-                        </a>
+                      <li className={isActiveLink("#roadmap")}>
+                        <Link
+                          href="#roadmap"
+                          className={"section-link"}
+                          onClick={() => handleClickScroll("roadmap")}
+                        >
+                          {
+                            selectedLanguage === "EN" ? "Roadmap" : "Roteiro"
+                          }
+                        </Link>
                       </li>
-                      <li>
-                        <a href="#">
-                          <i className="fab fa-linkedin-in"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i className="fab fa-youtube"></i>
-                        </a>
+                      <li className={isActiveLink("#contact")}>
+                        <Link
+                          href="#contact"
+                          className={"section-link"}
+                          onClick={() => handleClickScroll("contact")}
+                        >
+                          {
+                            selectedLanguage === "EN" ? "Contact us" : "Contate-nos"
+                          }
+                        </Link>
                       </li>
                     </ul>
+
+                  </div>
+
+                  <div style={{paddingLeft:'25px', paddingTop:'5px'}}>
+                    <ul>
+                      <li className={"header-lang"}>
+                        <span className={"selected-lang"}>LAN</span>
+                        <ul>
+                          <li style={{
+                            paddingLeft: '15px',
+                            paddingBottom: '5px',
+                            color: isClicked === "EN" ? "#00C4F4" : "gray",
+                            cursor: 'pointer',
+                          }}>
+                            <span onClick={() => handleLanguageChange("EN")}>EN</span>
+                          </li>
+                          <li style={{
+                            paddingLeft: '15px',
+                            paddingBottom: '5px',
+                            color: isClicked !== "EN" ? "#00C4F4" : "gray",
+                            cursor: 'pointer',
+                          }}>
+                            <span onClick={() => handleLanguageChange("PT")}>PT</span>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                  {/* <div className={"menu-outer"}>
+                    <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--> 
                   </div> */}
                 </nav>
               </div>
