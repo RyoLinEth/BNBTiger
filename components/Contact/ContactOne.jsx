@@ -17,7 +17,7 @@ const ContactOne = () => {
     {
       icon: 'fa-twitter',
       svgpath: '../img/svg/twitter.svg',
-      link: 'https://twitter.com/BnbTiger'
+      link: 'https://twitter.com/bnbtigerinu'
     },
     {
       icon: 'fa-medium',
