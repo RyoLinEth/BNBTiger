@@ -107,6 +107,11 @@ const HomeMap = () => {
             imageLink: "https://www.bkex.com/en/trade/BNBTiger_USDT",
             imageAlt: "BKEX",
         },
+        {
+            imageURL: "../img/svg/guarda.jpg",
+            imageLink: "https://guarda.com/coins/",
+            imageAlt: "GUARDA",
+        }
     ]
 
     const display = {
