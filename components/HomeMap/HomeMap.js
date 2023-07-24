@@ -49,7 +49,7 @@ const HomeMap = () => {
         {
             title: selectedLanguage == "EN" ? "Buy On PancakeSwap" : "Compre Na PancakeSwap",
             link: "https://pancakeswap.finance/swap?outputCurrency=0xAC68931B666E086E9de380CFDb0Fb5704a35dc2D",
-            className: "time-count day",
+            className: "time-co unt day",
         },
         {
             title: selectedLanguage == "EN" ? "Buy With Card" : "Compre com Cartão",
@@ -58,7 +58,7 @@ const HomeMap = () => {
         },
         {
             title: selectedLanguage == "EN" ? "Whitepaper" : "Papel branco",
-            link: "/api/download",
+            link: "https://ryolin.website/Whitepaper.pdf",
             className: "time-count min",
         },
         {
